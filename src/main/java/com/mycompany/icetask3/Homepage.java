@@ -27,8 +27,8 @@ public class Homepage extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Registration = new javax.swing.JButton();
+        Login = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -38,11 +38,21 @@ public class Homepage extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(153, 153, 255));
         jLabel1.setText("Time to ChatIT up");
 
-        jButton1.setForeground(new java.awt.Color(153, 153, 255));
-        jButton1.setText("Registration");
+        Registration.setForeground(new java.awt.Color(153, 153, 255));
+        Registration.setText("Registration");
+        Registration.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrationActionPerformed(evt);
+            }
+        });
 
-        jButton2.setForeground(new java.awt.Color(153, 153, 255));
-        jButton2.setText("Login");
+        Login.setForeground(new java.awt.Color(153, 153, 255));
+        Login.setText("Login");
+        Login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -52,9 +62,9 @@ public class Homepage extends javax.swing.JFrame {
                 .addContainerGap(58, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(Registration)
                         .addGap(129, 129, 129)
-                        .addComponent(jButton2))
+                        .addComponent(Login))
                     .addComponent(jLabel1))
                 .addGap(48, 48, 48))
         );
@@ -65,13 +75,20 @@ public class Homepage extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(Registration)
+                    .addComponent(Login))
                 .addGap(75, 75, 75))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
+        new LoginPage().setVisible(true);
+    }//GEN-LAST:event_LoginActionPerformed
+
+    private void RegistrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrationActionPerformed
+ new RegistrationPage().setVisible(true);    }//GEN-LAST:event_RegistrationActionPerformed
 
     /**
      * @param args the command line arguments
@@ -109,8 +126,8 @@ public class Homepage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton Login;
+    private javax.swing.JButton Registration;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
